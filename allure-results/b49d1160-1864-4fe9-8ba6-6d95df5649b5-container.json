@@ -1,0 +1,1 @@
+{"uuid":"b49d1160-1864-4fe9-8ba6-6d95df5649b5","name":"Palmonas_Test","children":["d7800d00-a507-4c8b-b653-56ebfba3bdd9"],"befores":[{"name":"settingUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736840644151,"stop":1736840661171}],"afters":[],"start":1736840644135,"stop":1736840662507}

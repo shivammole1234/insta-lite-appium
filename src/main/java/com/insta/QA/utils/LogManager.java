@@ -1,13 +1,14 @@
 package com.insta.QA.utils;
 
 
-import org.apache.logging.log4j.LogManager;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
 
-public class LogManagerUtil {
+public class LogManager {
 
     private static final Logger logger = Logger.getLogger(LogManager.class);
 
-    static {
+    static{
         PropertyConfigurator.configure("src/resources/log4j.properties");
     }
 
@@ -24,5 +25,3 @@ public class LogManagerUtil {
     }
 }
 
-
-}

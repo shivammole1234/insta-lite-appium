@@ -5,10 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigReader {
+public class ConfigFileReader {
     public Properties properties;
 
-    public ConfigReader(){
+    public ConfigFileReader(){
         properties=new Properties();
 
         try(FileInputStream fileInputStream=new FileInputStream("C:\\Users\\shiv\\java_workspace\\Appium\\Palmonas_Test\\src\\resources\\config.properties"))

@@ -1,81 +1,30 @@
-package com.polmonos.QA;
+package com.insta.QA;
 
-import com.polmonos.QA.base.BaseTest;
-import com.polmonos.QA.config.ConfigReader;
-import com.polmonos.QA.pages.HomePage;
+import com.insta.QA.base.BaseTest;
+import com.insta.QA.config.ConfigFileReader;
+import com.insta.QA.pages.HomePage;
+import com.insta.QA.pages.LoginPage;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
+
 public class HomePageTest extends BaseTest {
-    ConfigReader configReader=new ConfigReader();
+    ConfigFileReader prop = new ConfigFileReader();
     HomePage homePage;
 
     @BeforeTest
-    public void settingUp() throws MalformedURLException, InterruptedException {
+    public void settingUp() throws InterruptedException, MalformedURLException {
         setUp();
-        homePage=new HomePage(driver);
-        Thread.sleep(2000);
+        homePage = new HomePage(driver);
+        System.out.println("setting up method of HomepageTest");
+        Thread.sleep(1000);
     }
 
     @Test
-    public void clickAcntBtnTest(){
-        System.out.println("Test ant btn cliek start");
-        homePage.clickOnAcnt();
-        System.out.println("test ant btn cliekd completed");
+    public void setAllowContBtnSet() throws InterruptedException {
+        homePage.setAllowContBtn();
     }
-
-    @Test
-    public void clickOnCollBtnTest(){
-        System.out.println("collection btn click start");
-        homePage.clickOnCollBtn();
-        System.out.println("collection btn clicked ");
-    }
-
-    @Test
-    public void clickOnEmilyBtnTest()
-    {
-        System.out.println("emily btn test start");
-        homePage.clickOnEmilyInParisBtn();
-        System.out.println("emily btn test completed");
-    }
-
-    @Test
-    public void clickSearchTest(){
-        System.out.println("search cklick start");
-        homePage.clickSearch();
-        System.out.println("search click completed");
-    }
-
-    @Test
-    public void scrollDownTest(){
-        System.out.println("scroll down start");
-        homePage.clickOnCollBtn();
-        homePage.scrollOnPage();
-        System.out.println("scroll down complete");
-    }
-
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
