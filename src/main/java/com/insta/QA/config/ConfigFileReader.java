@@ -1,4 +1,4 @@
-package com.polmonos.QA.config;
+package com.insta.QA.config;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
